@@ -54,7 +54,7 @@ class Home extends Component {
     render() {
         let display;
         if (this.state.renderAthlete && this.state.athleteName) {
-            let athleteURL = `http://localhost:3003/athletes/${this.state.athleteName}`;
+            let athleteURL = `http://64.225.36.241/athletes/${this.state.athleteName}`;
             display = <div><h2 style={{margin: '1% auto 0 auto', maxWidth: '50%', textTransform: 'capitalize'}}>
                 {this.state.athleteName}</h2>
                 <AthleteTable key={athleteURL} onTableLoad={this.onTableLoad}
@@ -65,10 +65,10 @@ class Home extends Component {
                 let simplifiedName = eventName.replace(this.state.gender.toLowerCase() + 's', "");
                 let url;
                 (simplifiedName === 'decathlon' || simplifiedName === 'heptathlon') ?
-                    url = `http://localhost:3003/results/` +
+                    url = `http://64.225.36.241/results/` +
                         `${this.state.season}?top=${this.state.top}` +
                         `&event=${simplifiedName}` :
-                    url = `http://localhost:3003/results/` +
+                    url = `http://64.225.36.241/results/` +
                         `${this.state.season}?top=${this.state.top}` +
                         `&event=${this.state.gender.toLowerCase().replace(/\s/g, '')}s` +
                         `${simplifiedName}`;
@@ -86,10 +86,10 @@ class Home extends Component {
             })
         } else {
             let url;
-            (this.state.event === 'Decathlon' || this.state.event === 'Heptathlon') ? url = `http://localhost:3003/results/` +
+            (this.state.event === 'Decathlon' || this.state.event === 'Heptathlon') ? url = `http://64.225.36.241/results/` +
                 `${this.state.season}?top=${this.state.top}` +
                 `&event=${this.state.event}` :
-                url = `http://localhost:3003/results/` +
+                url = `http://64.225.36.241/results/` +
                     `${this.state.season}?top=${this.state.top}` +
                     `&event=${this.state.gender.toLowerCase().replace(/\s/g, '')}s` +
                     `${this.state.event.toLowerCase().replace(/\s/g, '')}`;
