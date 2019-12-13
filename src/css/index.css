@@ -1,0 +1,18 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+svg {
+    display: block;
+    margin: auto;
+}
+
+#root {
+    min-height: 100vh;
+}
+.icon-credit {
+    text-align: right;
+}
